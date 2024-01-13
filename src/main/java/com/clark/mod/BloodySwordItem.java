@@ -15,7 +15,7 @@ public class BloodySwordItem extends SwordItem {
     public BloodySwordItem() {
         super(BloodyItem.Holder.getInstance(), 3, -2.4F, new Properties());
 
-        this.attackDamage = 199;
+        this.attackDamage = 999;
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", 6, AttributeModifier.Operation.ADDITION));
