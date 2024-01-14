@@ -30,23 +30,30 @@ public class ClarkMod {
     // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
+    // 无尽之刃
     public static final RegistryObject<Item> BLOOD_SWORD_ITEM = ITEMS.register("bloody_sword", BloodySwordItem::new);
-//    public static final RegistryObject<Item> BLOODY_TRIDENT_ITEM = ITEMS.register("bloody_trident", BloodyTridentItem::new);
-
-    public static final RegistryObject<Item> BLOODY_AXE = ITEMS.register("bloody_axe", () -> new AxeItem(BloodyItem.Holder.getInstance(), 5.0F, -3.0F, new Item.Properties()));
+    // 斧子
+    public static final RegistryObject<Item> BLOODY_AXE = ITEMS.register("bloody_axe", () -> new AxeItem(BloodyItem.Holder.getInstance(), 990.0F, 6.0F, new Item.Properties()));
+    // 锄头
     public static final RegistryObject<Item> BLOODY_HOE = ITEMS.register("bloody_hoe", () -> new HoeItem(BloodyItem.Holder.getInstance(), -3, 0.0F, new Item.Properties()));
+    // 镐子
     public static final RegistryObject<Item> BLOODY_PICKAXE = ITEMS.register("bloody_pickaxe", () -> new PickaxeItem(BloodyItem.Holder.getInstance(), 1, -2.8F, new Item.Properties()));
+    // 铲子
     public static final RegistryObject<Item> BLOODY_SHOVEL = ITEMS.register("bloody_shovel", () -> new ShovelItem(BloodyItem.Holder.getInstance(), 1.5F, -3.0F, new Item.Properties()));
-
+    // 靴子
     public static final RegistryObject<Item> BLOODY_BOOTS = ITEMS.register("bloody_boots", () -> new ArmorItem(BloodyArmorMaterial.BLOODYITEM, ArmorItem.Type.BOOTS, new Item.Properties()));
+    // 护腿
     public static final RegistryObject<Item> BLOODY_LEGGINGS = ITEMS.register("bloody_leggings", () -> new ArmorItem(BloodyArmorMaterial.BLOODYITEM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    // 胸甲
     public static final RegistryObject<Item> BLOODY_CHESTPLATE = ITEMS.register("bloody_chestplate", () -> new ArmorItem(BloodyArmorMaterial.BLOODYITEM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    // 头盔
     public static final RegistryObject<Item> BLOODY_HELMET = ITEMS.register("bloody_helmet", () -> new ArmorItem(BloodyArmorMaterial.BLOODYITEM, ArmorItem.Type.HELMET, new Item.Properties()));
-
+    // 鞘翅
     public static final RegistryObject<Item> BLOODY_ELYTRA = ITEMS.register("bloody_elytra", () -> new ElytraItem((new Item.Properties()).durability(99999999).rarity(Rarity.UNCOMMON)));
+    // 剪刀
     public static final RegistryObject<Item> BLOODY_SHEARS = ITEMS.register("bloody_shears", () -> new ShearsItem((new Item.Properties()).durability(99999999)));
-    public static final RegistryObject<Item> BLOODY_SHIELD = ITEMS.register("bloody_shield", () -> new ShieldItem((new Item.Properties()).durability(99999999)));
-    public static final RegistryObject<Item> BLOODY_TRIDENT = ITEMS.register("bloody_trident", () -> new TridentItem((new Item.Properties()).durability(99999999)));
+//    public static final RegistryObject<Item> BLOODY_SHIELD = ITEMS.register("bloody_shield", () -> new ShieldItem((new Item.Properties()).durability(99999999)));
+//    public static final RegistryObject<Item> BLOODY_TRIDENT = ITEMS.register("bloody_trident", () -> new TridentItem((new Item.Properties()).durability(99999999)));
 
     public ClarkMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
